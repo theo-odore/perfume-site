@@ -1,0 +1,94 @@
+.ingredients {
+  padding: 120px 10%;
+  background-color: #fce4ec; /* The pink background is kept here */
+  text-align: center;
+  min-height: 150vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  z-index: 10; /* Lower z-index than Scents */
+}
+
+.ingredients-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.funnel-icon {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.05));
+}
+
+.section-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 6px;
+  color: #8d4a4a;
+  opacity: 0.7;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.ingredients-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  color: #8d4a4a;
+  margin-bottom: 0px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.ingredients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  max-width: 1100px;
+  border: 1px solid rgba(141, 74, 74, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+  overflow: visible; /* Allow flowers to move out */
+}
+
+.grid-item {
+  border: 1px solid rgba(141, 74, 74, 0.2);
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: visible;
+}
+
+.flower-img {
+  max-height: 90%;
+  max-width: 90%;
+  object-fit: contain;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 5; /* Lower than the funnel overlay in the Scents section */
+}
+
+@media (max-width: 768px) {
+  .ingredients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ingredients-title {
+    font-size: 3rem;
+  }
+  .ingredients {
+    min-height: auto;
+    padding: 80px 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .ingredients-grid {
+    grid-template-columns: 1fr;
+  }
+}

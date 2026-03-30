@@ -1,0 +1,138 @@
+.scents-banner {
+  width: 100%;
+  min-height: 190vh; /* Slightly increased for better scroll feel */
+  background-color: transparent; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Flow from top */
+  padding-top: 10vh;
+  position: relative;
+  overflow: visible;
+  z-index: 20;
+}
+
+.scents-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: visible; /* Ensure droplet isn't clipped */
+}
+
+.scents-bg-text {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(10rem, 30vw, 25rem);
+  color: #8d4a4a;
+  opacity: 0.8;
+  letter-spacing: -10px;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  transform: translateY(-200px); /* Shifted up by 200px */
+}
+
+.flask-wrapper {
+  position: relative;
+  width: min(100%, 1600px); /* Increased from 1200px to make it even larger */
+  z-index: 2; /* Flask is above the text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flask-overlay {
+  width: 100%;
+  height: auto;
+  opacity: 0.6; /* Glass-like appearance */
+  position: relative;
+  z-index: 3;
+}
+
+@media (max-width: 1200px) {
+  .flask-wrapper { width: 1000px; } /* Increased from 800px */
+}
+
+@media (max-width: 768px) {
+  .scents-bg-text { font-size: 15vw; letter-spacing: -5px; }
+  .flask-wrapper { width: 95vw; }
+}
+
+.bottle-assembly-anchor {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  pointer-events: none;
+  z-index: 25; /* Higher than funnel and text */
+}
+
+.bottle-assembly {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.scents-droplet {
+  position: absolute;
+  top: 0; /* Let y-transform handle initial offset */
+  left: 50%;
+  width: 100px; /* Increased from 60px for better visibility */
+  height: auto;
+  z-index: 5; /* Lowered to fall behind the bottle */
+  filter: drop-shadow(0 5px 15px rgba(141, 74, 74, 0.4));
+}
+
+
+.scents-sprayer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: auto;
+  z-index: 15; /* Sits on the bottle neck */
+  filter: drop-shadow(0 10px 20px rgba(141, 74, 74, 0.2));
+}
+
+.scents-cap {
+  position: absolute;
+  top: -220px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 480px;
+  height: auto;
+  z-index: 20;
+  filter: drop-shadow(0 10px 20px rgba(141, 74, 74, 0.2));
+}
+
+
+.bottle-wrapper {
+  margin-top: 0;
+  width: 100%;
+  max-width: 850px; /* Increased from 600px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; /* Higher than droplet */
+  position: sticky;
+  top: 300px; /* Increased top spacing */
+  overflow: visible;
+}
+
+.scents-bottle {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 50px rgba(141, 74, 74, 0.3));
+}

@@ -1,0 +1,86 @@
+.navbar-pill {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 56px;
+  width: 42%;
+  /* Maintaining the grand container size */
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  /* Clusters items in the center of the expanded container */
+  align-items: center;
+  gap: 40px;
+  /* Reduced gap for a more focused, professional read */
+  padding: 0 40px;
+
+
+
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  /* text-sm equivalent */
+  font-weight: 500;
+  /* medium */
+  padding: 10px 16px;
+  /* Standard item padding */
+  border-radius: 9999px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  /* Active/hover background */
+  padding: 6px 14px;
+  /* Active-specific padding override */
+  margin: 4px 2px;
+  /* Fine-tuning to keep the active capsule visually balanced */
+}
+
+/* Cleanup: ensure no legacy underlines */
+.nav-link::after {
+  display: none;
+}
+
+
+
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: 0 1rem;
+  }
+
+  .navbar-pill {
+    gap: 1.5rem;
+    padding: 0.6rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 0.75rem;
+  }
+
+  .navbar-pill {
+    gap: 1rem;
+    padding: 0.5rem 1.25rem;
+  }
+}

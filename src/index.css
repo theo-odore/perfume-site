@@ -1,0 +1,16 @@
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100%;
+  /* Global background to ensure the "transparent" Scents section looks correct */
+  background-color: #fce4ec; 
+}
+
+body {
+    overflow-x: hidden;
+}
