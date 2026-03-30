@@ -1,4 +1,0 @@
-﻿8940ea4 feat: implement React entry points and global styling
-718ddcf feat: setup home page template and public assets
-a15e489 chore: add project configuration and dependencies
-e1a7601 feat: initial repository setup
