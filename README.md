@@ -1,16 +1,69 @@
-# React + Vite
+# AETHER Perfume Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, minimalist web application for the **AETHER** perfume brand. This project focuses on high-end aesthetics, smooth micro-animations, and a highly responsive user experience using modern web technologies.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Minimalist Design:** Clean, elegant, and sophisticated UI tailored for a luxury perfume brand.
+- **Dynamic Animations:** Smooth transitions and hover effects powered by Framer Motion.
+- **Responsive Layout:** Carefully calibrated components to ensure a seamless experience across desktop, tablet, and mobile devices.
+- **Modern Build:** Fast and optimized development and production builds using Vite.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend Framework:** React 19
+- **Build Tool:** Vite
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Styling:** CSS (Modular & Responsive)
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+Make sure you have the following installed on your machine:
+- [Node.js](https://nodejs.org/) (v16.0.0 or higher recommended)
+- [Git](https://git-scm.com/)
+
+### Installation & Running Locally
+
+1. **Clone the repository**
+   Open your terminal and run the following command to clone the project:
+   ```bash
+   git clone https://github.com/theo-odore/perfume-site.git
+   ```
+
+2. **Navigate to the project directory**
+   ```bash
+   cd perfume-site
+   ```
+   *(Note: Depending on how your directories are named locally, navigate to the folder containing the `package.json` file).*
+
+3. **Install the dependencies**
+   ```bash
+   npm install
+   ```
+
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **View the website**
+   Open your browser and navigate to the local URL provided in the terminal (usually `http://localhost:5173/`).
+
+## 📦 Building for Production
+
+To create an optimized production build, run:
+
+```bash
+npm run build
+```
+
+This will generate a `dist` folder containing the compiled static assets, which can be deployed to any static hosting service like Vercel, Netlify, or GitHub Pages.
+
+## 📝 License
+
+This project is open-source and available for educational and personal use.
